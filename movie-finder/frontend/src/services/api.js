@@ -1,8 +1,7 @@
-const API_KEY = "ea819803c4d2f29216d12a7a9e6f7d7f"; // mets ta clef TMDb ici
+const API_KEY = "ea819803c4d2f29216d12a7a9e6f7d7f";
 const BASE = "https://api.themoviedb.org/3";
 
 export async function getRandom(){
-  // Exemple simple : prendre la liste "popular"
   const r = await fetch(`${BASE}/movie/popular?api_key=${API_KEY}&language=fr-FR&page=1`);
   return r.json();
 }

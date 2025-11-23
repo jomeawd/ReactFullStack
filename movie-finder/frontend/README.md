@@ -48,6 +48,12 @@ npm run dev
 
 Le projet sera disponible sur : `http://localhost:5173` (ou un port alternatif si déjà utilisé).
 
+## Utilisation de l'API
+
+Ce projet utilise l'API de The Movie Database (TMDB) via l'URL de base suivante :
+const BASE = "https://api.themoviedb.org/3";
+Cette API permet de récupérer les films, séries, détails et recherches affichés dans l'application.
+
 ## Build du projet
 
 Pour générer les fichiers optimisés pour la production :
