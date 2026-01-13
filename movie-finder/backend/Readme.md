@@ -13,3 +13,8 @@ Développer les routes CRUD pour les films/séries, avec protection pour les adm
 Ajouter les routes pour gérer les favoris des utilisateurs (ajout, suppression, consultation)
 Connecter le frontend React au backend, pour remplacer l’API TMDB et gérer les films/favoris
 Ajouter des fonctionnalités bonus : pagination, filtres, dashboard admin, et sécurisation des routes
+
+
+
+Pour lancer mon backend :
+npx nodemon src/server.js
