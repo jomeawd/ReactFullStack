@@ -62,3 +62,26 @@ export const deleteMovie = async (req, res) => {
     res.status(400).json({ message: "Erreur suppression" });
   }
 };
+
+export const searchMovies = async (req, res) => {
+    try {
+      const { query } = req.query;
+      
+      if (!query) {
+        return res.json([]);
+      }
+  
+      // Recherche par titre ou description (case insensitive)
+      const movies = await Movie.find({
+        $or: [
+          { title: { $regex: query, $options: 'i' } },
+          { description: { $regex: query, $options: 'i' } },
+          { genre: { $in: [new RegExp(query, 'i')] } }
+        ]
+      });
+  
+      res.json(movies);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };

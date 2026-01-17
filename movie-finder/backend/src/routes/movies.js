@@ -4,7 +4,8 @@ import {
   getMovieById,
   createMovie,
   updateMovie,
-  deleteMovie
+  deleteMovie,
+  searchMovies
 } from "../controllers/movies.controller.js";
 
 import { isAuthenticated, isAdmin } from "../middlewares/auth.js";
@@ -12,6 +13,7 @@ import { isAuthenticated, isAdmin } from "../middlewares/auth.js";
 const router = express.Router();
 
 // Public / utilisateur connecté
+router.get("/search", searchMovies);
 router.get("/", getAllMovies);
 router.get("/:id", getMovieById);
 
