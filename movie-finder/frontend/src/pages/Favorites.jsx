@@ -10,7 +10,7 @@ export default function Favorites(){
       <h1>Favoris</h1>
       {favorites.length === 0 ? <p>Tu n'as pas encore de favoris.</p> : (
         <div className="grid">
-          {favorites.map(m => <MovieCard key={m.id} movie={m} />)}
+          {favorites.map(m => <MovieCard key={m._id} movie={m} />)}
         </div>
       )}
     </div>
